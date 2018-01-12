@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Quara" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61913/Quara.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61913/Quara.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61913/Quara.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService1" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IQuara_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_RegisterUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUser" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_RegisterUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetUserInfoAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoAll" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetUserInfoAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetLanguageList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLanguageList" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetLanguageList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLanguageListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetCategoryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetCategoryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_NewQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewQuestion" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_NewQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetTheNewests_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTheNewests" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetTheNewests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTheNewestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetMostAnswered_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMostAnswered" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetMostAnswered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMostAnsweredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetMyQuestions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyQuestions" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetMyQuestions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyQuestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetAnswerListByQuestionId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnswerListByQuestionId" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetAnswerListByQuestionId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnswerListByQuestionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_AnswerByQuestionId_InputMessage">
+    <wsdl:part name="parameters" element="tns:AnswerByQuestionId" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_AnswerByQuestionId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AnswerByQuestionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetQuestionListByCategoryId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionListByCategoryId" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetQuestionListByCategoryId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionListByCategoryIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetQuestionListByLanguageId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionListByLanguageId" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetQuestionListByLanguageId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionListByLanguageIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_Search_InputMessage">
+    <wsdl:part name="parameters" element="tns:Search" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_Search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetAllQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQuestion" />
+  </wsdl:message>
+  <wsdl:message name="IQuara_GetAllQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQuestionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IQuara">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/Login" message="tns:IQuara_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/LoginResponse" message="tns:IQuara_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/Logout" message="tns:IQuara_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/LogoutResponse" message="tns:IQuara_Logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/ChangePassword" message="tns:IQuara_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/ChangePasswordResponse" message="tns:IQuara_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/RegisterUser" message="tns:IQuara_RegisterUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/RegisterUserResponse" message="tns:IQuara_RegisterUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/UpdateUser" message="tns:IQuara_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/UpdateUserResponse" message="tns:IQuara_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/GetUserInfo" message="tns:IQuara_GetUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/GetUserInfoResponse" message="tns:IQuara_GetUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/GetUserInfoAll" message="tns:IQuara_GetUserInfoAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/GetUserInfoAllResponse" message="tns:IQuara_GetUserInfoAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguageList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/GetLanguageList" message="tns:IQuara_GetLanguageList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/GetLanguageListResponse" message="tns:IQuara_GetLanguageList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/GetCategoryList" message="tns:IQuara_GetCategoryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/GetCategoryListResponse" message="tns:IQuara_GetCategoryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewQuestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/NewQuestion" message="tns:IQuara_NewQuestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/NewQuestionResponse" message="tns:IQuara_NewQuestion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTheNewests">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/GetTheNewests" message="tns:IQuara_GetTheNewests_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/GetTheNewestsResponse" message="tns:IQuara_GetTheNewests_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMostAnswered">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/GetMostAnswered" message="tns:IQuara_GetMostAnswered_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/GetMostAnsweredResponse" message="tns:IQuara_GetMostAnswered_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyQuestions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/GetMyQuestions" message="tns:IQuara_GetMyQuestions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/GetMyQuestionsResponse" message="tns:IQuara_GetMyQuestions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnswerListByQuestionId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/GetAnswerListByQuestionId" message="tns:IQuara_GetAnswerListByQuestionId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/GetAnswerListByQuestionIdResponse" message="tns:IQuara_GetAnswerListByQuestionId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AnswerByQuestionId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/AnswerByQuestionId" message="tns:IQuara_AnswerByQuestionId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/AnswerByQuestionIdResponse" message="tns:IQuara_AnswerByQuestionId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionListByCategoryId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/GetQuestionListByCategoryId" message="tns:IQuara_GetQuestionListByCategoryId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/GetQuestionListByCategoryIdResponse" message="tns:IQuara_GetQuestionListByCategoryId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionListByLanguageId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/GetQuestionListByLanguageId" message="tns:IQuara_GetQuestionListByLanguageId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/GetQuestionListByLanguageIdResponse" message="tns:IQuara_GetQuestionListByLanguageId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/Search" message="tns:IQuara_Search_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/SearchResponse" message="tns:IQuara_Search_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllQuestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuara/GetAllQuestion" message="tns:IQuara_GetAllQuestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuara/GetAllQuestionResponse" message="tns:IQuara_GetAllQuestion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IQuara" type="tns:IQuara">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IQuara/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://tempuri.org/IQuara/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://tempuri.org/IQuara/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUser">
+      <soap:operation soapAction="http://tempuri.org/IQuara/RegisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IQuara/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <soap:operation soapAction="http://tempuri.org/IQuara/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoAll">
+      <soap:operation soapAction="http://tempuri.org/IQuara/GetUserInfoAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguageList">
+      <soap:operation soapAction="http://tempuri.org/IQuara/GetLanguageList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <soap:operation soapAction="http://tempuri.org/IQuara/GetCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewQuestion">
+      <soap:operation soapAction="http://tempuri.org/IQuara/NewQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTheNewests">
+      <soap:operation soapAction="http://tempuri.org/IQuara/GetTheNewests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMostAnswered">
+      <soap:operation soapAction="http://tempuri.org/IQuara/GetMostAnswered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyQuestions">
+      <soap:operation soapAction="http://tempuri.org/IQuara/GetMyQuestions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnswerListByQuestionId">
+      <soap:operation soapAction="http://tempuri.org/IQuara/GetAnswerListByQuestionId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnswerByQuestionId">
+      <soap:operation soapAction="http://tempuri.org/IQuara/AnswerByQuestionId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionListByCategoryId">
+      <soap:operation soapAction="http://tempuri.org/IQuara/GetQuestionListByCategoryId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionListByLanguageId">
+      <soap:operation soapAction="http://tempuri.org/IQuara/GetQuestionListByLanguageId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap:operation soapAction="http://tempuri.org/IQuara/Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllQuestion">
+      <soap:operation soapAction="http://tempuri.org/IQuara/GetAllQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Quara">
+    <wsdl:port name="BasicHttpBinding_IQuara" binding="tns:BasicHttpBinding_IQuara">
+      <soap:address location="http://localhost:61913/Quara.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

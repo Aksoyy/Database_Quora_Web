@@ -1,0 +1,180 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
+
+<%@ Register Src="~/WebUserControl1.ascx" TagPrefix="uc1" TagName="WebUserControl1" %>
+<%@ Register Src="~/Question.ascx" TagPrefix="uc1" TagName="Question" %>
+<%@ Register Src="~/Search.ascx" TagPrefix="uc1" TagName="Search" %>
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ana Sayfa</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" href="style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="style.ie7.css" type="text/css" media="screen" /><![endif]-->
+
+    <style type="text/css">
+        .post .layout-item-0 {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        .post .layout-item-1 {
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: #DEDEDE;
+        }
+
+        .post .layout-item-2 {
+            padding: 10px;
+        }
+
+        .post .layout-item-3 {
+            padding: 5px;
+        }
+
+        .ie7 .post .layout-cell {
+            border: none !important;
+            padding: 0 !important;
+        }
+
+        .ie6 .post .layout-cell {
+            border: none !important;
+            padding: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="main">
+            <div class="cleared reset-box"></div>
+            <div class="bar nav">
+                <div class="nav-outer">
+                    <div class="nav-wrapper">
+                        <div class="nav-inner">
+                            <ul class="hmenu">
+                                <li>
+                                    <a href="/Default.aspx" class="active">Ana Sayfa</a>
+                                </li>
+                                <li>
+                                    <a href="/About.aspx">Hakkında</a>
+                                </li>
+                                <li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cleared reset-box"></div>
+            <div class="box sheet">
+                <div class="box-body sheet-body">
+                    <div class="layout-wrapper">
+                        <div class="content-layout">
+                            <div class="content-layout-row">
+                                <div class="layout-cell content">
+                                    <div class="box post">
+                                        <div class="box-body post-body">
+                                            <div class="post-inner article">
+                                                <div class="postcontent">
+                                                    <div class="content-layout">
+                                                        <div class="content-layout-row">
+                                                            <div class="layout-cell layout-item-0" style="width: 100%; height: 600px;">
+                                                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                                                </asp:ContentPlaceHolder>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content-layout-br layout-item-1">
+                                                    </div>
+                                                </div>
+                                                <div class="cleared"></div>
+                                            </div>
+
+                                            <div class="cleared"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="cleared"></div>
+                                </div>
+                                <div class="layout-cell sidebar1">
+
+
+
+                                    <%--    <div class="box block">
+                                        <div class="box-body block-body">
+                                            <div class="bar blockheader">
+                                                <h3 class="t">Latest Post</h3>
+                                            </div>
+                                            <div class="box blockcontent">
+                                                <div class="box-body blockcontent-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+                                                    <p>Etiam pharetra, tellus sit amet congue vulputate, nisi erat iaculis nibh, vitae feugiat sapien ante eget mauris.</p>
+
+                                                    <p>
+                                                        <br />
+                                                    </p>
+
+                                                    <p>
+                                                        <span style="color: rgb(57, 65, 61);">Aenean sollicitudin imperdiet arcu, vitae dignissim est posuere id.</span><br />
+                                                    </p>
+
+                                                    <p>
+                                                        <span style="color: rgb(57, 65, 61);">Suspendisse pharetra auctor pharetra. Nunc a sollicitudin est.</span><span style="color: rgb(57, 65, 61);"><br />
+                                                        </span>
+                                                    </p>
+                                                    <div class="cleared"></div>
+                                                </div>
+                                            </div>
+                                            <div class="cleared"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="cleared"></div>--%>
+
+                                    <uc1:WebUserControl1 runat="server" ID="WebUserControl1" />
+
+
+
+                                    <%if (Session["SessionKey"] != null)
+                                        {%>
+                                    <hr />
+                                    <uc1:Search runat="server" ID="Search" />
+                                    <hr />
+                                    <h1>Sorular</h1>
+                                    <hr />
+                                    <uc1:Question runat="server" ID="Question" />
+                                    <hr />
+                                    Menü
+                                    <hr />
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Questions/NewQuestion.aspx">Yeni Soru Yaz</asp:HyperLink>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cleared"></div>
+                    <div class="footer">
+                        <div class="footer-body">
+                            <div class="footer-text">
+                                <p>Copyright © 2017. Tüm hakları saklıdır.</p>
+                                <div class="cleared"></div>
+                                <div class="cleared"></div>
+                            </div>
+                        </div>
+                        <div class="cleared"></div>
+                    </div>
+                </div>
+                <div class="cleared"></div>
+            </div>
+    </form>
+</body>
+</html>

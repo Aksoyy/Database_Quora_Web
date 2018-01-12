@@ -1,0 +1,26 @@
+c:\users\dtcaksoy\documents\visual studio 2012\Projects\WebApplication1\WebApplication1\bin\WebApplication1.dll
+c:\users\dtcaksoy\documents\visual studio 2012\Projects\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+c:\users\dtcaksoy\documents\visual studio 2012\Projects\WebApplication1\WebApplication1\obj\Debug\Test.csprojResolveAssemblyReference.cache
+c:\users\dtcaksoy\documents\visual studio 2012\Projects\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+c:\users\dtcaksoy\documents\visual studio 2012\Projects\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\Nihal\Desktop\WebApplication1\WebApplication1\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\Nihal\Desktop\WebApplication1\WebApplication1\WebApplication1\bin\WebApplication1.dll
+C:\Users\Nihal\Desktop\WebApplication1\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+C:\Users\Nihal\Desktop\WebApplication1\WebApplication1\WebApplication1\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\Nihal\Desktop\WebApplication1\WebApplication1\WebApplication1\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\Nihal\Desktop\WebApplication1\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\Nihal\Desktop\WebApplication1\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\Nihal\Desktop\Proje\WebApplication1\WebApplication1\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\Nihal\Desktop\Proje\WebApplication1\WebApplication1\WebApplication1\bin\WebApplication1.dll
+C:\Users\Nihal\Desktop\Proje\WebApplication1\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+C:\Users\Nihal\Desktop\Proje\WebApplication1\WebApplication1\WebApplication1\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\Nihal\Desktop\Proje\WebApplication1\WebApplication1\WebApplication1\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\Nihal\Desktop\Proje\WebApplication1\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\Nihal\Desktop\Proje\WebApplication1\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\Nihal\Desktop\Veri tabanı ödevi\Quora_Web\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\Nihal\Desktop\Veri tabanı ödevi\Quora_Web\WebApplication1\bin\WebApplication1.dll
+C:\Users\Nihal\Desktop\Veri tabanı ödevi\Quora_Web\WebApplication1\bin\WebApplication1.pdb
+C:\Users\Nihal\Desktop\Veri tabanı ödevi\Quora_Web\WebApplication1\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\Nihal\Desktop\Veri tabanı ödevi\Quora_Web\WebApplication1\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\Nihal\Desktop\Veri tabanı ödevi\Quora_Web\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\Nihal\Desktop\Veri tabanı ödevi\Quora_Web\WebApplication1\obj\Debug\WebApplication1.pdb
